@@ -248,3 +248,19 @@ Completed 302 Found in 8ms (ActiveRecord: 3.7ms)
 Started GET "/posts/new" for 98.14.214.177 at 2018-07-16 19:40:34 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 98.14.214.177 at 2018-07-16 19:40:39 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U+11rZUAzLcyQeuLqBfenfO2pfXdg2YVSUUTk+bGMmj5Z9EL3Gs7waGIqX+47noYeHTb4yHYzaYHmz3gm5T92g==", "title"=>"stuck af ", "description"=>"asdf", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "stuck af "], ["description", "asdf"], ["created_at", "2018-07-16 19:40:39.575871"], ["updated_at", "2018-07-16 19:40:39.575871"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.152.27:45382/posts/new
+Completed 302 Found in 9ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/posts/new" for 98.14.214.177 at 2018-07-16 19:40:39 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
