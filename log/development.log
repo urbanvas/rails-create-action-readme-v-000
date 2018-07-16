@@ -303,3 +303,21 @@ Started GET "/posts" for 98.14.214.177 at 2018-07-16 19:42:01 +0000
 Processing by PostsController#index as HTML
   [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
   Rendered posts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 98.14.214.177 at 2018-07-16 19:42:13 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"85HS+1dVLHlUd0NbAtVNs8oRZB2mibPkzLuJmq4Mo6tZG3ZdHj7bD8e+Aa8SLOk2QdMaC1rSGFeCZafp015sGQ==", "title"=>"new post who dis", "description"=>"asdfthings", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "new post who dis"], ["description", "asdfthings"], ["created_at", "2018-07-16 19:42:13.689866"], ["updated_at", "2018-07-16 19:42:13.689866"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.152.27:45382/posts
+Completed 302 Found in 13ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/posts" for 98.14.214.177 at 2018-07-16 19:42:13 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.2ms)
